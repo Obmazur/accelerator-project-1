@@ -1,0 +1,203 @@
+// headings
+
+@mixin title--h1 {
+  font-family: $font-primary;
+  font-weight: 800;
+  font-size: 62px;
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 72px;
+
+    line-height: 118%;
+    letter-spacing: 0.03em;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 92px;
+
+    line-height: 120%;
+    letter-spacing: 0.04em;
+  }
+}
+
+@mixin title--h2 {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 48px;
+
+  line-height: 112%;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 82px;
+
+    line-height: 117%;
+  }
+}
+
+@mixin title--h3 {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+  }
+}
+
+@mixin title--h4 {
+  font-weight: 700;
+  font-size: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+  }
+}
+
+@mixin title--h5 {
+  font-size: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
+}
+
+@mixin title--h6 {
+  font-size: 18px;
+
+  line-height: 111%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+
+    line-height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+  }
+}
+
+// text
+@mixin text--large {
+  font-weight: 300;
+  font-size: 16px;
+
+  line-height: 125%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+
+    line-height: 133%;
+  }
+}
+
+@mixin text--medium {
+  font-weight: 300;
+  font-size: 14px;
+
+  line-height: 157%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+
+    line-height: 150%;
+  }
+}
+
+@mixin text--small {
+  font-size: 14px;
+
+  line-height: 143%;
+
+  @media (min-width: $tablet-width) {
+    line-height: 157%;
+  }
+}
+
+// buttons
+
+@mixin button-tabs {
+  font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+@mixin button-large {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@mixin button-medium {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: normal;
+  }
+}
+
+//numbers
+
+@mixin number-xlarge {
+  font-weight: 700;
+  font-size: 80px;
+
+  line-height: 150%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+  }
+}
+
+@mixin number-large {
+  font-weight: 700;
+  font-size: 64px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 70px;
+  }
+}
+
+@mixin number-medium {
+  font-weight: 700;
+  font-size: 48px;
+
+  line-height: 150%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}
+
+@mixin number-regular {
+  font-weight: 700;
+  font-size: 24px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+  }
+}

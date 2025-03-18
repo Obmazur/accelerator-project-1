@@ -5,18 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPERGYM</title>
+    <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
   <body class="page-body">
+    <header class="header" data-test="hero">
+      <div class="header__container">
+        <svg class= "header__logo" width="100" height="20">
+          <use href="/__spritemap#logo"></use>
+        </svg>
+        <p class="header__phone">
+          8 800 555-55-55
+        </p>
+      </div>
+
+      <section class="hero">
+        <div>
+          <p class="hero__features">
+            <span>Тренажёрный зал</span>
+            <span>Групповые занятия</span>
+            <span>Кардио-зона</span>
+          </p>
+          <p class="hero__city">
+            Омск
+          </p>
+          <h1 class="hero__title">
+            Фитнес центр
+          </h1>
+          <a class="hero__button button button--dark-back" href="#price">
+            Купить абонемент
+          </a>
+        </div>
+        <picture>
+          <source media="(min-width: 1366px)" type="image/webp" srcset=" 1x, 2x">
+          <source type="image/webp" srcset=" 1x,  2x">
+          <source media="(min-width: 1366px)" srcset=" 1x,  2x">
+          <img class="hero__image" src="" width="324" height="390" srcset="  2x" alt="Тренер в футболке Супермена.">
+        </picture>
+      </section>
+
+    </header>
+
+
+
     <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
+    <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт"> -->
+
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
+    <!-- <div data-test="about">about</div>
     <div data-test="price">price</div>
     <div data-test="games">games</div>
     <div data-test="juri">juri</div>
@@ -25,7 +66,7 @@
     <div data-test="faq">faq</div>
     <div data-test="reviews">reviews</div>
     <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <div data-test="footer">footer</div> -->
     <script type="module" src="js/main.js"></script>
   </body>
 
