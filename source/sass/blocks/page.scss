@@ -1,9 +1,11 @@
-.page-body {
+.page {
   height: 100%;
+}
 
+.page-body {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
 
   font-family: $font-secondary;
@@ -18,13 +20,21 @@
   main {
     flex-grow: 1;
   }
-
-  @media (min-width: $tablet-width) {
-      width: 768px;
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 1366px;
-    }
 }
 
+.page__wrapper {
+  width: 320px;
+
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding: 0 103px;
+  }
+}

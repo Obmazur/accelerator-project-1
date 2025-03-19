@@ -1,0 +1,53 @@
+.button {
+  @include link;
+  @include button-medium;
+
+  display: block;
+  position: relative;
+  padding: 0;
+
+  text-align: center;
+  border: none;
+  background-color: $base-white;
+  cursor: pointer;
+}
+
+.button--dark-back {
+  padding: 22px 89.5px;
+
+  border: 2px solid $base-white;
+  background-color: transparent;
+  color: $base-white;
+
+  &:hover {
+    background-color: $base-white;
+    color: $add-accent;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $base-dark;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $add-accent;
+  }
+
+  &:active {
+    border-color: $base-white;
+    background-color: $base-white;
+    color: $base-dark;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 50%;
+    pointer-events: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 0;
+  }
+
+}
