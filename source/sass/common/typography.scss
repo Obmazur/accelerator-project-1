@@ -56,7 +56,6 @@
 }
 
 @mixin title--h4 {
-  font-family: $font-secondary;
   font-weight: 700;
   font-size: 22px;
 
@@ -72,7 +71,6 @@
 }
 
 @mixin title--h5 {
-  font-family: $font-secondary;
   font-size: 20px;
 
   line-height: 100%;
@@ -87,7 +85,6 @@
 }
 
 @mixin title--h6 {
-  font-family: $font-secondary;
   font-size: 18px;
 
   line-height: 111%;
@@ -105,7 +102,6 @@
 
 // text
 @mixin text--large {
-  font-family: $font-secondary;
   font-weight: 300;
   font-size: 16px;
 
@@ -119,7 +115,6 @@
 }
 
 @mixin text--medium {
-  font-family: $font-secondary;
   font-weight: 300;
   font-size: 14px;
 
@@ -133,7 +128,6 @@
 }
 
 @mixin text--small {
-  font-family: $font-secondary;
   font-size: 14px;
 
   line-height: 143%;
@@ -146,7 +140,6 @@
 // buttons
 
 @mixin button-tabs {
-  font-family: $font-secondary;
   font-size: 16px;
 
   line-height: 100%;
@@ -157,7 +150,6 @@
 }
 
 @mixin button-large {
-  font-family: $font-secondary;
   font-weight: 700;
   font-size: 14px;
 
@@ -166,7 +158,6 @@
 }
 
 @mixin button-medium {
-  font-family: $font-secondary;
   font-weight: 700;
   font-size: 12px;
 
@@ -185,7 +176,6 @@
 //numbers
 
 @mixin number-xlarge {
-  font-family: $font-secondary;
   font-weight: 700;
   font-size: 80px;
 
@@ -197,7 +187,6 @@
 }
 
 @mixin number-large {
-  font-family: $font-secondary;
   font-weight: 700;
   font-size: 64px;
 
@@ -209,7 +198,6 @@
 }
 
 @mixin number-medium {
-  font-family: $font-secondary;
   font-weight: 700;
   font-size: 48px;
 
@@ -221,7 +209,6 @@
 }
 
 @mixin number-regular {
-  font-family: $font-secondary;
   font-weight: 700;
   font-size: 24px;
 

@@ -1,9 +1,4 @@
 .header {
-  background: $main-gradient;
-  color: $base-white;
-}
-
-.header__container {
   display: flex;
   justify-content: space-between;
 
@@ -36,4 +31,27 @@
   @include title--h4;
 
   margin: 0;
+
+  text-decoration: none;
+  color: $base-white;
+
+  &:hover {
+    color: $button-border-secondary;
+    opacity: 50%;
+  }
+
+  &:focus {
+    outline: none;
+    color: $block-secondary-background;
+  }
+
+  &:active {
+    color: $base-dark;
+    box-shadow: 0 1px $base-dark;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 50%;
+    pointer-events: none;
+  }
 }

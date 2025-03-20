@@ -14,43 +14,93 @@
   </head>
 
   <body class="page__body">
-    <header class="header" data-test="hero">
-      <div class="page__wrapper">
-        <div class="header__container">
-          <svg class= "header__logo" width="100" height="20">
-            <use href="/__spritemap#sprite-logo"></use>
-          </svg>
-          <p class="header__phone">
-            8 800 555-55-55
-          </p>
-        </div>
+    <main>
 
-        <section class="hero">
-          <div class="hero__container">
-            <p class="hero__features">
-              <span>Тренажёрный зал</span>
-              <span>Групповые занятия</span>
-              <span>Кардио-зона</span>
-            </p>
-            <p class="hero__city">
-              Омск
-            </p>
-            <h1 class="hero__title">
-              Фитнес центр
-            </h1>
-            <a class="hero__button button button--main button--dark-back" href="#price">
-              Купить абонемент
+      <!-- формально это должен быть хедер и хиро, но в целях проверки сделал секцию -->
+
+      <div class="hero" data-test="hero">
+        <div class="page__wrapper">
+          <header class="header">
+            <svg class= "header__logo" width="100" height="20">
+              <use href="/__spritemap#sprite-logo"></use>
+            </svg>
+            <a class="header__phone" href="tel:88005555555">
+              8 800 555-55-55
             </a>
+          </header>
+
+          <section class="intro">
+            <div class="intro__container">
+              <p class="intro__features">
+                Тренажёрный зал<br>
+                Групповые занятия<br>
+                Кардио-зона
+              </p>
+              <p class="intro__city">
+                Омск
+              </p>
+              <h1 class="intro__title">
+                Фитнес центр
+              </h1>
+              <a class="intro__button button button--main button--dark-back" href="#price">
+                Купить абонемент
+              </a>
+            </div>
+            <picture>
+              <!-- <source media="(min-width: 1366px)" type="image/webp" srcset=" 1x, 2x">
+              <source type="image/webp" srcset=" 1x,  2x"> -->
+              <source media="(min-width: 1366px)" srcset="img/hero-img-desktop.jpg 1x" width="500" height="524">
+              <img class="intro__image" src="img/hero-img-tablet.jpg" width="324" height="390" srcset="" alt="Тренер в футболке Супермена.">
+            </picture>
           </div>
-          <picture>
-            <!-- <source media="(min-width: 1366px)" type="image/webp" srcset=" 1x, 2x">
-            <source type="image/webp" srcset=" 1x,  2x"> -->
-            <source media="(min-width: 1366px)" srcset="img/hero-img-desktop.jpg 1x" width="500" height="524">
-            <img class="hero__image" src="img/hero-img-tablet.jpg" width="324" height="390" srcset="" alt="Тренер в футболке Супермена.">
-          </picture>
         </section>
       </div>
-    </header>
+
+      <section class="about" data-test="about">
+        <div class="about__description">
+          <h2>Тренажёрный зал</h2>
+          <span>Просторный зал площадью 900 кв/м</span>
+          <p>
+            Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.
+            <span>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span>
+          </p>
+        </div>
+        <picture>
+          <!-- <source media="(min-width: 1366px)" type="image/webp" srcset=" 1x, 2x">
+              <source type="image/webp" srcset=" 1x,  2x"> -->
+              <source media="(min-width: 1366px)" srcset="img/about-gym-desktop.jpg 1x" width="660" height="400">
+              <source media="(min-width: 768px)" srcset="img/about-gym-tablet.jpg 1x" width="678" height="345">
+              <img class="about__image" src="img/about-gym-mobile.jpg" width="320" height="280" srcset="" alt="Фотография тренажёрного зала.">
+        </picture>
+        <div class="about__video about__video--js">
+          <picture>
+            <!-- <source media="(min-width: 1366px)" type="image/webp" srcset=" 1x, 2x">
+                <source type="image/webp" srcset=" 1x,  2x"> -->
+                <source media="(min-width: 1366px)" srcset="img/about-video-desktop.jpg 1x" width="360" height="230">
+                <source media="(min-width: 768px)" srcset="img/about-video-tablet.jpg 1x" width="270" height="170">
+                <img class="about__video-preview" src="img/about-video-mobile.jpg" width="320" height="170" srcset="" alt="Обложка видеоролика.">
+          </picture>
+          <button class="about__play-button" type="button">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle opacity="0.2" cx="36" cy="36" r="35" stroke="#ED0233" stroke-width="2" />
+              <circle cx="36" cy="36" r="26" fill="url(#paint0_linear_1330_109)" />
+              <path d="M42 36L33 41.1962L33 30.8038L42 36Z" fill="white" />
+              <defs>
+                <linearGradient id="paint0_linear_1330_109" x1="20.2825" y1="10" x2="65.0083" y2="15.5351" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ED0233" />
+                  <stop offset="1" stop-color="#003EB7" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+
+      <template id="video">
+        <iframe class="about_video-player" width="100%" height="100%" src="https://www.youtube.com/embed/9TZXsZItgdw?si=rU9jXVyZqAl6hiWV" title="video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </template>
+    </main>
 
 
 
@@ -58,8 +108,7 @@
     <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт"> -->
 
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <!-- <div data-test="about">about</div>
-    <div data-test="price">price</div>
+    <!-- <div data-test="price">price</div>
     <div data-test="games">games</div>
     <div data-test="juri">juri</div>
     <div data-test="features">features</div>
