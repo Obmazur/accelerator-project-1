@@ -8,6 +8,18 @@
   }
 }
 
+.plan:focus-within,
+.plan:has(.plan__button:hover) {
+  padding: 43px 35px;
+  border: 7px solid;
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px;
+  }
+}
+
 .plan__title {
   @include title--h4;
 
@@ -88,5 +100,6 @@
 }
 
 .plan__button {
+  position: relative;
   width: 100%;
 }
