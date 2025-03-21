@@ -13,7 +13,7 @@
 }
 
 .button--dark-back {
-  padding: 22px 89.5px;
+  padding: 22px;
 
   border: 2px solid $base-white;
   background-color: transparent;
@@ -38,16 +38,47 @@
   }
 
   &[aria-disabled="true"] {
-    opacity: 50%;
+    opacity: 0.5;
     pointer-events: none;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 20px 0;
+    padding: 20px;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 25px 0;
+    padding: 25px;
+  }
+
+}
+
+.button--main {
+  padding: 25px;
+  border: 2px solid $base-dark;
+
+  &:hover {
+    padding: 27px;
+    border: none;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    color: $base-white;
+  }
+
+  &:focus {
+    outline: none;
+    background: linear-gradient(151deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
+    color: $base-white;
+  }
+
+  &:active {
+    padding: 27px;
+    border: none;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    color: rgb(255, 255, 255, 0.7);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
 
 }

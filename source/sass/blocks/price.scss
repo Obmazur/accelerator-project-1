@@ -1,0 +1,134 @@
+.price {
+  overflow: hidden;
+  position: relative;
+
+  padding: 40px 0;
+
+  background-color: $secondary-light;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+  }
+}
+
+.price::before {
+  display: none;
+  content: '';
+  position: absolute;
+  width: 275px;
+  height: 328px;
+  bottom: 0;
+  right: -16px;
+  background-image: url(../../img/weights-tablet.png);
+  transform: rotate(-210deg);
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 321px;
+    height: 384px;
+    right: -93px;
+    background-image: url(../../img/weights-desktop.png);
+  }
+}
+
+.price__wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 0 194px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 103px;
+  }
+}
+
+.price__header {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 35px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 405px 40px;
+  }
+}
+
+.price__title {
+  @include title--h3;
+
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.price__filter {
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: 0 2px rgba(120, 120, 120, 0.2);
+}
+
+.price__button {
+  @include button-tabs-lined;
+
+  padding-bottom: 8px;
+
+  opacity: 0.5;
+  background-color: transparent;
+  text-transform: none;
+}
+
+.price__button--active {
+  opacity: 1;
+
+  padding-bottom: 10px;
+
+  box-shadow: 0 2px $tab-state;
+}
+
+.price__list {
+  @include list;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.price__item {
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 360px;
+    margin-bottom: 0;
+  }
+}

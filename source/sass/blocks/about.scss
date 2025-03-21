@@ -1,14 +1,18 @@
 .about {
-  max-width: $desktop-width;
+  width: 320px;
   margin: 0 auto;
   position: relative;
   padding: 40px 0;
 
   @media (min-width: $tablet-width) {
+    width: $tablet-width;
+
     padding: 60px 45px 120px;
   }
 
   @media (min-width: $desktop-width) {
+    width: $desktop-width;
+
     display: flex;
 
     padding: 120px 103px 240px;
@@ -74,11 +78,11 @@
     }
 
     span {
-      margin-bottom: auto;
+      margin-bottom: 20px;
     }
 
     p {
-      margin: 0 0 4px;
+      margin: auto 0 4px;
 
       span {
         display: block;
@@ -200,33 +204,5 @@
       width: 100px;
       height: 100px;
     }
-
-    &:active {
-      circle:first-child {
-        stroke: $base-dark;
-        opacity: 1;
-      }
-
-      circle:nth-child(2) {
-        fill: $base-white;
-        r: 29;
-      }
-
-      path {
-        fill: $base-dark;
-      }
-    }
   }
-
-  // .about_video-player {
-  //   @media (min-width: $tablet-width) {
-  //     width: 270px;
-  //     height: 170px;
-  //   }
-
-  //   @media (min-width: $desktop-width) {
-  //     width: 360px;
-  //     height: 230px;
-  //   }
-  // }
 }
